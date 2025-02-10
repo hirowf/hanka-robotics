@@ -6,8 +6,8 @@ services:
     restart: always
     environment:
       POSTGRESQL_USERNAME: hirowf
-      POSTGRESQL_PASSWORD: root
-      POSTGRESQL_DATABASE: postgress
+      POSTGRESQL_PASSWORD: postgres
+      POSTGRESQL_DATABASE: postgres
     ports:
       - '5432:5432'
     volumes:
