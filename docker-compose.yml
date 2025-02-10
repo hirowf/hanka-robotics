@@ -1,16 +1,17 @@
+version: '3.8'
 services:
-  postgres:
+  db_postgres:
     image: bitnami/postgresql:latest
     container_name: db_postgres
+    restart: always
     environment:
-      - POSTGRESQL_USERNAME=postgres
-      - POSTGRESQL_PASSWORD=postgres
-      - POSTGRESQL_DATABASE=postgres
+      POSTGRESQL_USERNAME: hirowf
+      POSTGRESQL_PASSWORD: root
+      POSTGRESQL_DATABASE: postgress
     ports:
       - '5432:5432'
     volumes:
       - postgres_data:/bitnami/postgresql
-
 volumes:
   postgres_data:
     driver: local
